@@ -64,7 +64,7 @@ const Footer = () => {
           </Link>
         </div>
       )}
-      <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="whatsapp-icon">
+      <a href="https://wa.me/+917757984048" target="_blank" rel="noopener noreferrer" className="whatsapp-icon">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
 
