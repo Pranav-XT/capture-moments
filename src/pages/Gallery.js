@@ -4,11 +4,11 @@ import Header from "../components/Header"; // Use Header component
 import "../styles/styles.css";
 
 const Gallery = () => {
-  // Assuming images are in public/assets/images/image1.jpg, image2.jpg, etc.
-  const images = Array.from({ length: 29 }, (_, index) => 
-    `/assets/images/image${index + 1}.jpg`
+  const images = Array.from({ length: 24 }, (_, index) =>
+    require(`../assets/gallery/image${index + 1}.jpg`)
   );
-
+  
+  
   return (
     <div>
       {/* Use Header component */}

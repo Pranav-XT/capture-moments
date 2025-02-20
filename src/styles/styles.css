@@ -629,28 +629,6 @@ header nav ul li a:hover {
   color: #ff802c; /* Highlight Color */
 }
 
-/* Gallery */
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 40px 20px;
-  justify-items: center;
-}
-
-.gallery-container img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.gallery-container img:hover {
-  transform: scale(1.05);
-}
-
 
 /* Floating Cart Icon */
 .cart-footer {
@@ -815,3 +793,107 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+
+/*Aditya*/
+/* Privacy Policy Page */
+.privacy-policy-container {
+  max-width: 800px;
+  margin: 100px auto; /* Center content with margin */
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Privacy Policy Headings */
+.privacy-policy-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff802c;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-container h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-top: 20px;
+  border-bottom: 2px solid #ff802c;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs and Lists */
+.privacy-policy-container p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-container ul {
+  padding-left: 20px;
+}
+
+.privacy-policy-container ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.privacy-policy-container strong {
+  color: #ff802c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    padding: 20px;
+    margin: 80px 10px;
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Gallery Container */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery Images */
+.gallery-container img {
+  width: 100%;
+  height: 200px; /* Fixed height to ensure uniform size */
+  object-fit: cover; /* Ensures images fill the box without distortion */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .gallery-container img {
+    height: 150px; /* Smaller height for better mobile view */
+  }
+}

@@ -8,6 +8,7 @@ import CartPage from "./pages/CartPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
+import PrivacyPolicy from "./pages/PrivacyPolicy"; // Import the page
 import "./styles/styles.css";
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/contact" element={<ContactPage />} /> 
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
         </Routes>
         <Footer />
       </CartProvider>
