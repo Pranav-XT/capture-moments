@@ -501,7 +501,8 @@ header .social-media a:hover {
 
 .social-icons {
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-right: 35px;
 }
 
 .social-icons a {
@@ -649,78 +650,7 @@ header nav ul li a:hover {
 .gallery-container img:hover {
   transform: scale(1.05);
 }
-/* Footer Styles */
-.footer {
-  background-color: #301c0ffb;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
 
-/* Footer Layout - 3 Columns */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Logo Section */
-.footer-logo img {
-  width: 300px;
-}
-
-.footer-logo p {
-  font-size: 0.9rem;
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
-/* Services Section */
-.footer-services h3, .footer-contact h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.footer-services ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-services ul li {
-  margin-bottom: 5px;
-}
-
-.footer-services ul li a {
-  text-decoration: none;
-  color: #ff802c;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-services ul li a:hover {
-  color: #fff;
-}
-
-/* Contact Section */
-.footer-contact p {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-}
-
-.footer-contact a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-contact a:hover {
-  color: #ff802c;
-  text-decoration: underline;
-}
 
 /* Floating Cart Icon */
 .cart-footer {
@@ -766,3 +696,122 @@ header nav ul li a:hover {
   width: 40px;
   height: 40px;
 }
+/* Footer Styles */
+.footer {
+  background-color: #301c0ffb;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Footer Layout - Center Align */
+.footer-container {
+  display: flex;
+  justify-content: center; /* Centers all sections */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 50px; /* Adds spacing between columns */
+  text-align: left;
+}
+
+/* Ensure Equal Space for Sections */
+.footer-logo,
+.footer-services,
+.footer-contact {
+  flex: 1; /* Ensures equal width */
+}
+
+/* Logo Section */
+.footer-logo img {
+  width: 350px;
+}
+
+.footer-logo h4,
+.footer-logo h5 {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+/* Footer Links */
+.footer-links {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #ff802c;
+  text-decoration: underline;
+}
+
+/* Services Section */
+.footer-services {
+  text-align: center; /* Ensures content is centered */
+}
+
+.footer-services h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-services ul li {
+  margin-bottom: 5px;
+}
+
+.footer-services ul li a {
+  text-decoration: none;
+  color: #ff802c;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-services ul li a:hover {
+  color: #fff;
+}
+
+/* Contact Section */
+.footer-contact {
+  text-align: right;
+}
+
+.footer-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #ff802c;
+  text-decoration: underline;
+}
+

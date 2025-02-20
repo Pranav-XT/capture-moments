@@ -12,18 +12,31 @@ const Footer = () => {
       <div className="footer-container">
         {/* Logo Section (Left Column) */}
         <div className="footer-logo">
-        <Link to="/">
-  <img src={logo} alt="Capture Moments Logo" className="logo" />
-</Link>
-         
-          <br></br>
-          <p>Credits: </p>
-          <p>Pranav, Aditya, Santosh & Mr. Unknown</p>
-          <p>&copy; 2025 Capture Moments. All Rights Reserved.</p>
-        
+          <Link to="/">
+            <img src={logo} alt="Capture Moments Logo" className="logo" />
+          </Link>
+          <br />
+
+          {/* Footer Links */}
+          <div className="footer-links">
+            <Link to="/terms">Terms & Conditions</Link> | 
+            <Link to="/privacy-policy"> Privacy Policy</Link> | 
+            <Link to="/help"> 24/7 Help</Link>
+          </div>
+
+          <h6><br></br>
+            <center>
+              Credits
+              <p></p> 
+              Pranav Patange, Aditya Pawar, Santosh Patil & Vaibhav Salunkhe
+            </center>
+          </h6>
+          <p>
+            <center>&copy; 2025 Capture Moments. All Rights Reserved.</center>
+          </p>
         </div>
 
-        {/* Services Section (Middle Column) */}
+        {/* Services Section */}
         <div className="footer-services">
           <h3>Our Services</h3>
           <ul>
@@ -36,22 +49,33 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Section (Right Column) */}
+        {/* Contact Section */}
         <div className="footer-contact">
-        <h3><Link to="/contact" className="contact-link">Contact Us</Link></h3>
-          <p>E-mail: <a href="mailto:info@example.com">pranavpatangext@gmail.com</a></p>
-          <p>Phone: <a href="tel:+917757984048">+91 7757984048</a></p>
-          <p>Address: <a href="https://maps.app.goo.gl/SkQX6J7NhRB3T8Ve8"target="_blank">Sadguru Gadge Maharaj College Karad 415110, Maharashtra India</a></p>
+          <h3>
+            <center>
+              <Link to="/contact" className="contact-link">Contact Us</Link>
+            </center>
+          </h3>
+          <p><center>E-mail: <a href="mailto:info@example.com">pranavpatangext@gmail.com</a></center></p>
+          <p><center>Phone: <a href="tel:+917757984048">+91 7757984048</a></center></p>
+          <p>
+            <center>
+              Address: <a href="https://maps.app.goo.gl/SkQX6J7NhRB3T8Ve8" target="_blank">
+                Sadguru Gadge Maharaj College, Karad 415110, Maharashtra India
+              </a>
+            </center>
+          </p>
+
           {/* Social Media Icons */}
-    <div className="social-icons">
-        <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram"></i></a>
-        <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook"></i></a>
-        <a href="https://youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
-        <a href="https://twitter.com" target="_blank"><i className="fab fa-x-twitter"></i></a>
-        <a href="https://twitter.com" target="_blank"><i className="fab fa-linkedin"></i></a>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
-      </div>
+          <div className="social-icons">
+            <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank"><i className="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i className="fab fa-linkedin"></i></a>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
+          </div>
         </div>
       </div>
 
@@ -64,12 +88,12 @@ const Footer = () => {
           </Link>
         </div>
       )}
-      <a href="https://wa.me/+917757984048" target="_blank" rel="noopener noreferrer" className="whatsapp-icon">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
 
+      {/* WhatsApp Floating Icon */}
+      <a href="https://wa.me/+917757984048" target="_blank" rel="noopener noreferrer" className="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+      </a>
     </footer>
-    
   );
 };
 
