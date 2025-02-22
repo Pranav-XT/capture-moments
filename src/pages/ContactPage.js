@@ -11,7 +11,7 @@ const ContactPage = () => {
     e.preventDefault();
     console.log(formData);
     alert("Your message has been sent!");
-    setFormData({ name: "", email: "", message: "" }); // Reset form after submission
+    setFormData({ name: "", email: "", message: "" }); 
   };
 
   return (

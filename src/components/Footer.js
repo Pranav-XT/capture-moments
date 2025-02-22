@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo Section (Left Column) */}
+        
         <div className="footer-logo">
           <Link to="/">
             <img src={logo} alt="Capture Moments Logo" className="logo" />
@@ -19,9 +19,9 @@ const Footer = () => {
 
           {/* Footer Links */}
           <div className="footer-links">
-            <Link to="/terms">Terms & Conditions</Link> | 
+            <Link to="/terms">T&C</Link> | 
             <Link to="/privacy-policy"> Privacy Policy</Link> | 
-            <Link to="/help"> 24/7 Help</Link>
+            <Link to="/help">Help & Support</Link>
           </div>
 
           <h6><br></br>
@@ -73,7 +73,7 @@ const Footer = () => {
             <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook"></i></a>
             <a href="https://youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
             <a href="https://twitter.com" target="_blank"><i className="fab fa-x-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i className="fab fa-linkedin"></i></a>
+           
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
           </div>
         </div>

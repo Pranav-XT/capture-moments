@@ -5,22 +5,36 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.id === product.id);
+  const addToCart = (item) => {
+    setCartItems((prevCartItems) => {
+      const existingItem = prevCartItems.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
-        return prevItems.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+
+        return prevCartItems.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
         );
-      } else {
-        return [...prevItems, { ...product, quantity: 1 }];
       }
+      return [...prevCartItems, { ...item, quantity: 1 }];
     });
   };
 
-  const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+
+  const removeFromCart = (id, newQuantity = 0) => {
+    setCartItems((prevCartItems) => {
+
+      if (newQuantity === 0) {
+        return prevCartItems.filter((item) => item.id !== id);
+      }
+
+      // Otherwise, update the quantity of the item
+      return prevCartItems.map((item) =>
+        item.id === id ? { ...item, quantity: newQuantity } : item
+      );
+    });
   };
+
 
   return (
     <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
@@ -29,4 +43,5 @@ export const CartProvider = ({ children }) => {
   );
 };
 
+// Custom hook to access the cart context
 export const useCart = () => useContext(CartContext);

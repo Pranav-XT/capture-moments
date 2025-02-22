@@ -1,23 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header"; // Import Header component
 import "../styles/styles.css"; // Import styles
 
 const PrivacyPolicy = () => {
   return (
     <div>
-      <Header /> {/* Navigation/Header Component */}
-
-      {/* Add spacing below navbar */}
       <div style={{ marginTop: "100px" }}></div>
 
       {/* Privacy Policy Section */}
       <section className="privacy-policy-container">
-        <h1>Privacy Policy</h1>
+        <h1>Privacy & Policy</h1>
         <p>Last updated: 20-02-2025</p>
 
         <h2>1. Introduction</h2>
         <p>
-          Welcome to Capture Moments. We value your privacy and are
+          Welcome to <strong>Capture Moments.</strong> We value your privacy and are
           committed to protecting your personal data. This Privacy & Policy
           explains how we collect, use, and share your information when you use
           our website.
@@ -62,7 +60,7 @@ const PrivacyPolicy = () => {
         </ul>
 
         <h2>8. Contact Us</h2>
-        <p>If you have any questions, contact us.</p>
+        <p>If you have any questions,<Link to="/contact" className="contact-link"> <strong>Contact Us</strong></Link></p>
 
         <p><strong>Note:</strong> This Privacy Policy may be updated periodically.</p>
       </section>

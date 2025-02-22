@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom"; // Import Link
+import { Link, useLocation } from "react-router-dom"; 
 import logo from "../assets/logo.png";
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className={isHomePage ? "transparent-navbar" : "solid-navbar"}>
       <div className="logo">
-        {/* Make the logo clickable and redirect to home */}
+        
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
@@ -20,8 +20,9 @@ const Header = () => {
           <li><Link to="/service">Services</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/about">About</Link></li>
+          {/* <li><Link to="/blog">Blog</Link></li> */}
+          {/* <li><Link to="/about">About</Link></li> */}
+          {/* Pages will be added soon ! */}
           <li><Link to="/cart">Cart</Link></li>
           
         </ul>
@@ -43,9 +44,6 @@ const Header = () => {
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-x-twitter"></i>
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i>
         </a>
       </div>
     </header>

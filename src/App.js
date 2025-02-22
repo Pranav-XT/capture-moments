@@ -8,7 +8,15 @@ import CartPage from "./pages/CartPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // Import the page
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+// Will be Added Soon!
+
+// import Help from "./pages/Help";
+// import About from "./pages/About";
+// import Blog from "./pages/Blog";
+// import Terms from "./pages/Terms";
+// import Feedback from "./pages/Feedback";
 import "./styles/styles.css";
 
 function App() {
