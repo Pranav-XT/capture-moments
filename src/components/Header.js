@@ -20,8 +20,9 @@ const Header = () => {
           <li><Link to="/service">Services</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
-          {/* <li><Link to="/blog">Blog</Link></li> */}
-          {/* <li><Link to="/about">About</Link></li> */}
+          <li><Link to="/FAQ">FAQs</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/about">About</Link></li>
           {/* Pages will be added soon ! */}
           <li><Link to="/cart">Cart</Link></li>
           

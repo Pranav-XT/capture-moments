@@ -9,12 +9,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import FAQ from "./pages/FAQ";
 
 // Will be Added Soon!
 
 // import Help from "./pages/Help";
-// import About from "./pages/About";
-// import Blog from "./pages/Blog";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
 // import Terms from "./pages/Terms";
 // import Feedback from "./pages/Feedback";
 import "./styles/styles.css";
@@ -30,6 +31,9 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/contact" element={<ContactPage />} /> 
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/About" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         </Routes>
