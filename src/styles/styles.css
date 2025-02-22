@@ -1184,3 +1184,6 @@ display: block;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
 }
+.about-card strong {
+  color: #ff802c;
+  }
