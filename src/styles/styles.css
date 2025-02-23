@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000000b9;
+  background-color: #000000e3;
   color: #ff802c;
 }
 
@@ -157,8 +157,11 @@ animation: changeBackground 20s infinite; /*  20 seconds */
 75% {
   background-image: url('../assets/images/background4.jpg');
 }
-100% {
+99% {
   background-image: url('../assets/images/background5.jpg');
+}
+100% {
+  background-image: url('../assets/images/background1.jpg');
 }
 }
 
@@ -180,25 +183,6 @@ padding: 100px;
 animation: changeBackground 20s infinite; /* 20 seconds */
 }
 
-/* Animation for Background Change */
-@keyframes changeBackground {
-0% {
-  background-image: url('../assets/images/background1.jpg');
-}
-25% {
-  background-image: url('../assets/images/background2.jpg');
-}
-50% {
-  background-image: url('../assets/images/background3.jpg');
-}
-75% {
-  background-image: url('../assets/images/background4.jpg');
-}
-100% {
-  background-image: url('../assets/images/background5.jpg');
-}
-
-}
 
 /* Services */
 .service-list {
@@ -405,24 +389,6 @@ align-items: center;
 animation: changeBackground 20s infinite; /* Background animation */
 }
 
-/* Background Animation */
-@keyframes changeBackground {
-0% {
-  background-image: url('../assets/images/background1.jpg');
-}
-25% {
-  background-image: url('../assets/images/background2.jpg');
-}
-50% {
-  background-image: url('../assets/images/background3.jpg');
-}
-75% {
-  background-image: url('../assets/images/background4.jpg');
-}
-100% {
-  background-image: url('../assets/images/background5.jpg');
-}
-}
 
 /* Contact Form Container */
 .contact-page {
@@ -918,15 +884,6 @@ padding: 100px;
 animation: changeBackground 20s infinite;
 }
 
-/* Background Animation */
-@keyframes changeBackground {
-0% { background-image: url('../assets/images/background1.jpg'); }
-25% { background-image: url('../assets/images/background2.jpg'); }
-50% { background-image: url('../assets/images/background3.jpg'); }
-75% { background-image: url('../assets/images/background4.jpg'); }
-100% { background-image: url('../assets/images/background5.jpg'); }
-}
-
 /* FAQ Section */
 .faq-title {
 font-size: 2.5rem;
@@ -1001,14 +958,6 @@ display: block;
   animation: changeBackground 20s infinite;
 }
 
-/* Background Animation */
-@keyframes changeBackground {
-  0% { background-image: url('../assets/images/background1.jpg'); }
-  25% { background-image: url('../assets/images/background2.jpg'); }
-  50% { background-image: url('../assets/images/background3.jpg'); }
-  75% { background-image: url('../assets/images/background4.jpg'); }
-  100% { background-image: url('../assets/images/background5.jpg'); }
-}
 
 /* Blog List */
 .blog-list {
@@ -1136,14 +1085,6 @@ display: block;
   animation: changeBackground 20s infinite;
 }
 
-/* Background Animation */
-@keyframes changeBackground {
-  0% { background-image: url('../assets/images/background1.jpg'); }
-  25% { background-image: url('../assets/images/background2.jpg'); }
-  50% { background-image: url('../assets/images/background3.jpg'); }
-  75% { background-image: url('../assets/images/background4.jpg'); }
-  100% { background-image: url('../assets/images/background5.jpg'); }
-}
 
 /* About Card */
 .about-card {
@@ -1187,3 +1128,44 @@ display: block;
 .about-card strong {
   color: #ff802c;
   }
+
+  /* General Styles for Small Screens */
+@media (max-width: 768px) {
+  /* Ensure full-width content */
+  .service-page, .about-page, .blog-page {
+    padding: 20px;
+    height: auto;
+  }
+
+  /* Change grid layout to single column */
+  .services {
+    grid-template-columns: 1fr; /* 1 column instead of 3 */
+  }
+
+  .service-card {
+    width: 90%; /* Reduce card size */
+  }
+
+  /* Adjust images */
+  .service-card img, .about-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Center text */
+  h1, h3, p {
+    text-align: center;
+  }
+
+  /* Reduce button size */
+  .service-card button, .blog-card button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Adjust Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
