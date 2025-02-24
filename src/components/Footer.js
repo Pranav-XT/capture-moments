@@ -2,7 +2,11 @@ import React from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import cartIcon from "../assets/cart.png";
-import logo from "../assets/logo.png"; // Ensure correct path
+import logo from "../assets/logo.png";
+import locationIcon from "../assets/location.png";
+import emailIcon from "../assets/email.png";
+import phoneIcon from "../assets/phone.png";
+import clockIcon from "../assets/clock.png";
 
 const Footer = () => {
   const { cartItems } = useCart();
@@ -11,71 +15,54 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         
+        {/* 1st Column - Logo & Social Links */}
         <div className="footer-logo">
           <Link to="/">
             <img src={logo} alt="Capture Moments Logo" className="logo" />
           </Link>
-          <br />
-
-          {/* Footer Links */}
-          <div className="footer-links">
-            <Link to="/terms">T&C</Link> | 
-            <Link to="/privacy-policy"> Privacy Policy</Link> | 
-            <Link to="/help">Help & Support</Link>
-          </div>
-
-          <h6><br></br>
-            <center>
-              Credits
-              <p></p> 
-              Pranav Patange, Aditya Pawar, Santosh Patil & Vaibhav Salunkhe
-            </center>
-          </h6>
-          <p>
-            <center>&copy; 2025 Capture Moments. All Rights Reserved.</center>
-          </p>
-        </div>
-
-        {/* Services Section */}
-        <div className="footer-services">
-          <h3>Our Services</h3>
-          <ul>
-            <li><Link to="/service">Wedding Photoshoots</Link></li>
-            <li><Link to="/service">Baby Photoshoots</Link></li>
-            <li><Link to="/service">Birthday Photoshoots</Link></li>
-            <li><Link to="/service">Event Photoshoots</Link></li>
-            <li><Link to="/service">Pre-Wedding Photoshoots</Link></li>
-            <li><Link to="/service">Vacation Photoshoots</Link></li>
-          </ul>
-        </div>
-
-        {/* Contact Section */}
-        <div className="footer-contact">
-          <h3>
-            <center>
-              <Link to="/contact" className="contact-link">Contact Us</Link>
-            </center>
-          </h3>
-          <p><center>E-mail: <a href="mailto:info@example.com">pranavpatangext@gmail.com</a></center></p>
-          <p><center>Phone: <a href="tel:+917757984048">+91 7757984048</a></center></p>
-          <p>
-            <center>
-              Address: <a href="https://maps.app.goo.gl/SkQX6J7NhRB3T8Ve8" target="_blank">
-                Sadguru Gadge Maharaj College, Karad 415110, Maharashtra India
-              </a>
-            </center>
-          </p>
-
-          {/* Social Media Icons */}
+          <br></br><p>Photography is more than just pictures; it’s about freezing emotions, capturing fleeting moments, and turning them into timeless memories.</p>
           <div className="social-icons">
-            <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
+          <br></br> <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
             <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram"></i></a>
             <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook"></i></a>
             <a href="https://youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
-            <a href="https://twitter.com" target="_blank"><i className="fab fa-x-twitter"></i></a>
            
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
-          </div>
+          </div>  
+        </div>
+
+        {/* 2nd Column - Quick Links */}
+        <div className="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+          <br></br><li><Link to="/">Home</Link></li>
+          <br></br><li><Link to="/gallery">Gallery</Link></li>
+          <br></br><li><Link to="/blog">Blog</Link></li>
+          <br></br><li><Link to="/faq">FAQs</Link></li>
+          <br></br><li><Link to="/contact">Contact</Link></li>
+          <br></br><li><Link to="/about">About Us</Link></li>
+          </ul>
+        </div>
+
+        {/* 3rd Column - Services */}
+        <div className="footer-services">
+          <h3>Services</h3>
+          <ul>
+          <br></br><li><Link to="/service">Wedding Photoshoots</Link></li>
+          <br></br><li><Link to="/service">Baby Photoshoots</Link></li>
+          <br></br><li><Link to="/service">Event Photoshoots</Link></li>
+          <br></br><li><Link to="/service">Birthday Photoshoots</Link></li>
+          <br></br><li><Link to="/service">Pre-Wedding Photoshoots</Link></li>
+          <br></br><li><Link to="/service">Vacation Photoshoots</Link></li>
+          </ul>
+        </div>
+
+        {/* 4th Column - Contact Details */}
+        <div className="footer-address">
+          <h3>Contact Details</h3>
+          <br></br><p><img src={locationIcon} alt="Location" /><a href="https://maps.app.goo.gl/SkQX6J7NhRB3T8Ve8" target="_blank">Sadguru Gadge Maharaj College, Karad 415110</a></p>
+          <br></br><p><img src={emailIcon} alt="Email" /><a href="mailto:pranavpatangext@gmail.com">pranavpatangext@gmail.com</a></p>
+          <br></br><p><img src={phoneIcon} alt="Phone" /><a href="tel:+917757984048">+91 7757984048</a></p>
+          <br></br><p><img src={clockIcon} alt="Clock" /> 8 AM - 5 PM, Monday-Saturday</p>
         </div>
       </div>
 
@@ -93,6 +80,14 @@ const Footer = () => {
       <a href="https://wa.me/+917757984048" target="_blank" rel="noopener noreferrer" className="whatsapp-icon">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
       </a>
+
+      {/* Copyright & Credit Section */}
+      <div className="footer-bottom">
+        <p>
+          © Copyright 2025. All Rights Reserved by <strong><Link to="/">Capture Moments</Link></strong><br />
+          Designed and Developed With ❤️ by <strong><Link to="/contact">PranavXT</Link></strong>
+        </p>
+      </div>
     </footer>
   );
 };
