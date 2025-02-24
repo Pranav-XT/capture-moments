@@ -67,18 +67,48 @@ nav ul li {
 margin: 0 15px; 
 }
 
+/* Default Navbar Styles */
 nav ul li a {
-color: white;
-font-size: 18px;
-font-weight: bold;
-padding: 10px 15px;
-border-radius: 5px;
-transition: background-color 0.3s;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
 }
 
-nav ul li a:hover {
-background-color: none;
+/* Highlight the Active Page */
+nav ul li a.active-link {
+  color: #ff802c !important; /* Orange highlight */
+  font-weight: bold;
 }
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: #ff802c;
+}
+
+/* Enquire Now Button */
+.enquire-now span a {
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* Enquire Now Hover */
+.enquire-now span a:hover {
+  color: #ff802c;
+}
+
+/* Ensure Active Link in Enquire Now Section */
+.enquire-now span a.active-link {
+  color: #ff802c !important;
+}
+
 
 /* Social Media Icons */
 header .social-media {
@@ -482,8 +512,8 @@ margin-right: 55px;
 
 .social-icons a {
 color: white;
-font-size: 28px;
-margin: 0 10px;
+font-size: 26px;
+margin: 7px;
 transition: color 0.3s;
 }
 
@@ -675,7 +705,7 @@ height: 60px;
 }
 /* Footer Styles */
 .footer {
-  background-color: #301c0ffb;
+  background-color: #a564398f;
   color: white;
   padding: 30px 0;
   text-align: center;
@@ -809,7 +839,7 @@ height: 60px;
 /* Footer Bottom Section */
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.95rem;
