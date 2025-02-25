@@ -28,7 +28,7 @@ h1, h2, h3 {
 
 /* Header */
 header {
-  position: fixed;  /* Keeps it at the top while scrolling */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -72,7 +72,7 @@ nav ul li a {
   color: white;
   font-size: 18px;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border-radius: 5px;
   transition: color 0.3s ease-in-out;
   text-decoration: none;
@@ -184,8 +184,8 @@ color: #ff802c;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: changeBackground 20s infinite;
-  transition: opacity 2s ease-in-out; /* Smooth transition */
+  animation: changeBackground 25s infinite;
+  transition: opacity 3s ease-in-out; /* Smooth transition */
   z-index: -1; /* Keeps background behind content */
 }
 
@@ -195,17 +195,20 @@ color: #ff802c;
     background-image: url('../assets/images/background1.jpg');
     opacity: 1;
   }
-  25% {
+  20% {
     background-image: url('../assets/images/background2.jpg');
   }
-  50% {
+  40% {
     background-image: url('../assets/images/background3.jpg');
   }
-  75% {
+  65% {
     background-image: url('../assets/images/background4.jpg');
   }
-  90% {
+  80% {
     background-image: url('../assets/images/background5.jpg');
+  }
+  95% {
+    background-image: url('../assets/images/background6.jpg');
   }
 }
 
@@ -434,9 +437,9 @@ animation: changeBackground 20s infinite;
 max-width: 600px;
 padding: 20px;
 background: rgba(255, 255, 255, 0.1); /* Light Transparent Background */
-backdrop-filter: blur(10px); /* Glass Effect */
+backdrop-filter: blur(15px); /* Glass Effect */
 border-radius: 10px;
-box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
 text-align: center;
 color: white;
 }
@@ -452,6 +455,7 @@ margin-bottom: 15px;
 .contact-page p {
 font-size: 1rem;
 margin-bottom: 20px;
+font-weight: bold;
 color: #ddd;
 }
 
@@ -502,17 +506,141 @@ transition: background-color 0.3s;
 background-color: #e66b00;
 }
 
+/* Enquiry */
+/* Enquiry Page Background */
+.enquiry-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: changeBackground 25s infinite;
+}
+
+/* Enquiry Form Container */
+.enquiry-page {
+  max-width: 1000px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: white;
+}
+
+/* Enquiry Page Title */
+.enquiry-page h2 {
+  font-size: 2rem;
+  color: #ff802c;
+  margin-bottom: 15px;
+}
+
+/* Enquiry Page Text */
+.enquiry-page p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+/* Enquiry Form */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Labels */
+.enquiry-form label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+/* Input Fields */
+.enquiry-form input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* Dropdown Select */
+.enquiry-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent Background */
+  backdrop-filter: blur(50px); /* Slight Glass Blur Effect */
+  color: rgba(255, 255, 255, 0.226);
+  appearance: none; /* Removes default arrow */
+  cursor: pointer;
+}
+
+/* Dropdown Options */
+.enquiry-form select option {
+  background: rgba(0, 0, 0, 0.267); /* Dark background for options */
+  color: white;
+}
+
+/* Hover & Focus */
+.enquiry-form select:focus {
+  border: 1px solid #ff802c;
+  outline: none;
+}
+
+/* Dropdown Arrow Custom Styling */
+.enquiry-form select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='white' d='M2 0L0 2h4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  padding-right: 30px; /* Space for arrow */
+}
+
+/* Placeholder Text */
+.enquiry-form input::placeholder,
+.enquiry-form select {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit Button */
+.enquiry-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff802c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect */
+.enquiry-form button:hover {
+  background-color: #e66b00;
+}
+
 
 
 .social-icons {
 color: #ffffff;
 margin-top: 15px;
-margin-right: 55px;
+margin-right: 5px;
 }
 
 .social-icons a {
 color: white;
-font-size: 26px;
+font-size: 28px;
 margin: 7px;
 transition: color 0.3s;
 }
@@ -593,8 +721,8 @@ to {
   width: 100%;
   padding: 15px 20px;
   background: transparent; /* No separate background */
-  backdrop-filter: blur(10px); /* Adds slight glass effect */
-  transition: background 0.3s ease-in-out;
+  backdrop-filter: blur(20px); /* Adds slight glass effect */
+  transition: background 0.4s ease-in-out;
   z-index: 1000;
 }
 
@@ -626,7 +754,7 @@ to {
   color: white;
   text-align: center;
   padding: 20px;
-  animation: changeBackground 20s infinite; /* Uses the same animation */
+  animation: changeBackground 25s infinite; /* Uses the same animation */
 }
 
 /* Navbar Links */
@@ -655,9 +783,6 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #ff6600; /* Highlight Color */
 }
-
-
-
 
 /* Floating Cart Icon */
 .cart-footer {
@@ -708,7 +833,7 @@ height: 60px;
   background-color: #a564398f;
   color: white;
   padding: 30px 0;
-  text-align: center;
+  text-align: left;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -722,7 +847,7 @@ height: 60px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  gap: 50px; 
+  gap: 100px; 
   text-align: left;
 }
 
@@ -731,12 +856,12 @@ height: 60px;
 .footer-services,
 .footer-links,
 .footer-address {
-  flex: 1; /* Each section takes equal space */
+  flex: 1; 
 }
 
 /* Logo Section */
 .footer-logo img {
-  width: 200px;
+  width: 220px;
 }
 
 .footer-logo p {
@@ -809,7 +934,7 @@ height: 60px;
 }
 
 .footer-address h3 {
-  font-size: 1.2rem;
+  font-size: 1.rem;
   margin-bottom: 10px;
 }
 
@@ -821,7 +946,7 @@ height: 60px;
 }
 
 .footer-address img {
-  width: 20px;
+  width: 22px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -852,70 +977,118 @@ height: 60px;
 
 
 /*Aditya*/
-/* Privacy Policy Page */
-.privacy-policy-container {
-max-width: 800px;
-margin: 100px auto; /* Center content with margin */
-padding: 40px;
-background: rgba(255, 255, 255, 0.9); /* Light background for readability */
-border-radius: 8px;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-font-family: Arial, sans-serif;
-color: #333;
-line-height: 1.6;
+/* Privacy Policy Page Background */
+.privacy-page {
+  width: 100vw;
+  min-height: 100vh; /* Ensures it doesn't get cut off */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Adjusted to prevent overlap */
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding-top: 120px; /* Prevents header overlap */
+  padding-bottom: 80px; /* Prevents footer overlap */
+  animation: changeBackground 20s infinite;
+}
+
+/* Privacy Policy Title */
+.privacy-title {
+  font-size: 2.5rem;
+  color: #ff802c;
+  margin-bottom: 10px;
+}
+
+/* Last Updated Date */
+.privacy-date {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+/* Privacy Policy Content */
+.privacy-content {
+  width: 90%; /* Increased width */
+  max-width: 1000px; /* Wider content area */
+  background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+  backdrop-filter: blur(30px);
+  padding: 40px; /* Increased padding */
+  border-radius: 12px;
+  text-align: left;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Privacy Policy Headings */
-.privacy-policy-container h1 {
-text-align: center;
-font-size: 2.5rem;
-color: #ff802c;
-margin-bottom: 20px;
-}
-
-.privacy-policy-container h2 {
-font-size: 1.8rem;
-color: #222;
-margin-top: 20px;
-border-bottom: 2px solid #ff802c;
-padding-bottom: 5px;
+.privacy-content h2 {
+  font-size: 1.8rem;
+  color: #ff802c;
+  margin-top: 25px;
+  border-bottom: 2px solid #ff802c;
+  padding-bottom: 5px;
 }
 
 /* Paragraphs and Lists */
-.privacy-policy-container p {
-font-size: 1.1rem;
-color: #444;
-margin-bottom: 15px;
+.privacy-content p,
+.privacy-content ul {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
 }
 
-.privacy-policy-container ul {
-padding-left: 20px;
+/* List Styling */
+.privacy-content ul {
+  padding-left: 25px;
 }
 
-.privacy-policy-container ul li {
-margin-bottom: 10px;
+.privacy-content ul li {
+  margin-bottom: 12px;
 }
 
-/* Contact Section */
-.privacy-policy-container strong {
-color: #ff802c;
+/* Contact Link */
+.contact-link {
+  color: #ff802c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .privacy-content {
+    width: 95%;
+    padding: 30px;
+  }
+}
+
 @media (max-width: 768px) {
-.privacy-policy-container {
-  padding: 20px;
-  margin: 80px 10px;
+  .privacy-page {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .privacy-title {
+    font-size: 2rem;
+  }
+
+  .privacy-content {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.5rem;
+  }
 }
 
-.privacy-policy-container h1 {
-  font-size: 2rem;
-}
-
-.privacy-policy-container h2 {
-  font-size: 1.5rem;
-}
-}
 
 /* Gallery Container */
 .gallery-container {

@@ -12,6 +12,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import EnquiryPage from "./pages/Enquiry";
 import Loader from "./components/Loader";
 import Cursor from "./components/Cursor";
 import "./styles/styles.css";
@@ -40,6 +41,8 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/About" element={<About />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/enquiry" element={<EnquiryPage />} />
+
       </Routes>
       <Footer />
     </CartProvider>

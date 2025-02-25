@@ -25,10 +25,10 @@ const Header = () => {
             <Link to="/gallery" className={location.pathname.startsWith("/gallery") ? "active-link" : ""}>Gallery</Link>
           </li>
           <li>
-            <Link to="/about" className={location.pathname.startsWith("/about") ? "active-link" : ""}>About</Link>
+            <Link to="/FAQ" className={location.pathname.startsWith("/FAQ") ? "active-link" : ""}>FAQs</Link>
           </li>
           <li>
-            <Link to="/cart" className={location.pathname.startsWith("/cart") ? "active-link" : ""}>Cart</Link>
+            <Link to="/blog" className={location.pathname.startsWith("/blog") ? "active-link" : ""}>Blogs</Link>
           </li>
         </ul>
       </nav>
@@ -37,7 +37,7 @@ const Header = () => {
       <div className="enquire-now">
         <img src={enquireIcon} alt="Enquire" />
         <span>
-          <Link to="/contact" className={location.pathname.startsWith("/contact") ? "active-link" : ""}>Enquire Now</Link>
+          <Link to="/enquiry" className={location.pathname.startsWith("/enquiry") ? "active-link" : ""}>Book an Appointment</Link>
         </span>
       </div>
     </header>

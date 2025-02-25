@@ -7,6 +7,7 @@ import locationIcon from "../assets/location.png";
 import emailIcon from "../assets/email.png";
 import phoneIcon from "../assets/phone.png";
 import clockIcon from "../assets/clock.png";
+import helpIcon from "../assets/help.png";
 
 const Footer = () => {
   const { cartItems } = useCart();
@@ -20,7 +21,9 @@ const Footer = () => {
           <Link to="/">
             <img src={logo} alt="Capture Moments Logo" className="logo" />
           </Link>
-          <br></br><p>Photography is more than just pictures; it’s about freezing emotions, capturing fleeting moments, and turning them into timeless memories.</p>
+          <br></br><br></br><h5><strong>Photography is more than just 
+            pictures; it’s about freezing emotions, capturing fleeting moments, 
+            and turning them into timeless memories.</strong></h5>
           <div className="social-icons">
           <br></br> <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
             <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram"></i></a>
@@ -28,7 +31,13 @@ const Footer = () => {
             <a href="https://youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
             <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
            
-          </div>  
+          </div> 
+          <div className="footer-bottom">
+      
+        <strong><Link to="/Terms">Terms & Conditions</Link></strong><br></br>
+        <br></br><strong><Link to="/privacy-policy">Privacy & Policy</Link></strong>
+       
+      </div> 
         </div>
 
         {/* 2nd Column - Quick Links */}
@@ -37,9 +46,9 @@ const Footer = () => {
           <ul>
           <br></br><li><Link to="/">Home</Link></li>
           <br></br><li><Link to="/gallery">Gallery</Link></li>
-          <br></br><li><Link to="/blog">Blog</Link></li>
+          <br></br><li><Link to="/blog">Blogs</Link></li>
           <br></br><li><Link to="/faq">FAQs</Link></li>
-          <br></br><li><Link to="/contact">Contact</Link></li>
+          <br></br><li><Link to="/contact">Contact Us</Link></li>
           <br></br><li><Link to="/about">About Us</Link></li>
           </ul>
         </div>
@@ -63,8 +72,12 @@ const Footer = () => {
           <br></br><p><img src={locationIcon} alt="Location" /><a href="https://maps.app.goo.gl/SkQX6J7NhRB3T8Ve8" target="_blank">Sadguru Gadge Maharaj College, Karad 415110</a></p>
           <br></br><p><img src={emailIcon} alt="Email" /><a href="mailto:pranavpatangext@gmail.com">pranavpatangext@gmail.com</a></p>
           <br></br><p><img src={phoneIcon} alt="Phone" /><a href="tel:+917757984048">+91 7757984048</a></p>
-          <br></br><p><img src={clockIcon} alt="Clock" /> 8 AM - 5 PM, Monday-Saturday</p>
-        </div>
+          <br></br><p><img src={clockIcon} alt="Clock" />8 AM - 5 PM, Monday-Saturday</p>
+          <br></br> <p>
+  <Link to="/help" className="help-link">
+    <img src={helpIcon} alt="Help" /> 24/7 Help & Support
+  </Link>
+</p>        </div>
       </div>
 
       {/* Floating Cart Icon */}
