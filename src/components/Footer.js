@@ -80,8 +80,8 @@ const Footer = () => {
 </p>
 
           <br></br> <p>
-  <Link to="/enquiry" className="Enquire">
-    <img src={helpIcon} alt="Enquire" /> 24/7 Help & Support
+  <Link to="/Help" className="Help">
+    <img src={helpIcon} alt="Help" /> 24/7 Help & Support
   </Link>
 </p>        </div>
       </div>
