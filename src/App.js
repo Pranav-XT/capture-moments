@@ -28,10 +28,12 @@ function App() {
     setLoading(true);
     setTimeout(() => setLoading(false), 500); // Simulated page load delay
   }, [location]);  // Runs when route changes
-
+  if(loading){
+    return <Loader />
+}
   return (
     <CartProvider>
-      {loading && <Loader />}
+
       <Cursor /> {/* Add Cursor */}
       <Header />
       <Routes>
