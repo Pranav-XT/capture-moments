@@ -6,6 +6,7 @@ import bg3 from "../assets/images/background3.jpg";
 import bg4 from "../assets/images/background4.jpg";
 import bg5 from "../assets/images/background5.jpg";
 import bg6 from "../assets/images/background6.jpg";
+import Testimonials from "./Testimonials";
 const backgrounds = [bg1, bg2, bg3, bg4, bg5, bg6];
 
 const HomePage = () => {
@@ -36,12 +37,14 @@ const HomePage = () => {
       }}
     >
       <h1>Welcome to Capture Moments</h1>
+
       <h2>Your Precious Moments, Beautifully Captured</h2>
       <Link to="/service">
 
       <button>
   <Link to="/service">Explore Services</Link>
 </button>
+
 
       </Link>
     </div>

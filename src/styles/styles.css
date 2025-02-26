@@ -236,21 +236,19 @@ animation: changeBackground 20s infinite; /* 20 seconds */
   cursor: pointer;
   padding-top: 10px !important; 
   border-radius: 12px;
-  padding: 10px;
+  padding: 15px;
 }
 .services {
-margin-top: 100px; /* Adjust as needed */
+margin-top: 90px; /* Adjust as needed */
   display: grid;
   border: 1px solid rgba(255, 255, 255, 0.2); 
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.1); /* Light Transparent */
 
   border-radius: 20px;
 }
-
-
 
 .services-list h1 {
 text-align: center;
@@ -259,25 +257,29 @@ margin-bottom: 20px;
 }
 
 
+/* Service Cards */
 .service-card {
-border-radius: 15px;
-background: rgba(255, 255, 255, 0.1); /* Light Transparent Background */
-backdrop-filter: blur(10px); /* Glass Effect */
-padding: 20px;
-text-align: center;
-transition: transform 0.3s ease-in-out;
-}
-.service-card img {
-width: 350px;
-height: 200px;
-object-fit: cover;
-border-radius: 8px;
-opacity: 0.9; 
-}
-.service-card:hover {
-transform: scale(1.05);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
 }
 
+.service-card img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
 
 .service-card h3 {
   font-size: 1.5rem;
@@ -290,10 +292,81 @@ transform: scale(1.05);
   color: #ffffff;
 }
 
+/* Buttons inside Service Card */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 .service-card button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+
+.service-card button:hover {
+  background-color: #ff802c;
+}
+
+/* View Details Button */
+.view-details-btn {
+  background-color: #008f3900;
+  color: white;
+}
+
+.view-details-btn:hover {
+  background-color: #008f39 !important;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background-color: #ff6600;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #008f39;
+}
+
+/* Full Service View */
+.full-service {
+  width: 80%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.full-service-image {
+  width: 90%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.service-rating {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-top: 5px;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #ff802c;
+  background-color: #d92323;
   color: white;
   border: none;
   cursor: pointer;
@@ -301,10 +374,17 @@ transform: scale(1.05);
   transition: background-color 0.3s;
 }
 
-.service-card button:hover {
-  background-color: #ff802c;
+.back-button:hover {
+  background-color: #b71c1c;
 }
 
+/* Centering Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
 
 /* Cart Page */
 
@@ -876,6 +956,7 @@ height: 60px;
 }
 
 .footer-links h3 {
+  color: #ff802c;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -905,6 +986,7 @@ height: 60px;
 }
 
 .footer-services h3 {
+  color: #ff802c;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -934,6 +1016,7 @@ height: 60px;
 }
 
 .footer-address h3 {
+  color: #ff802c;
   font-size: 1.rem;
   margin-bottom: 10px;
 }
@@ -977,22 +1060,22 @@ height: 60px;
 
 
 /*Aditya*/
-/* Privacy Policy Page Background */
+/* Privacy Policy / Terms From Vaibhav */
 .privacy-page {
   width: 100vw;
-  min-height: 100vh; /* Ensures it doesn't get cut off */
+  min-height: 100vh; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Adjusted to prevent overlap */
+  justify-content: flex-start; 
   align-items: center;
   color: white;
   text-align: center;
-  padding-top: 120px; /* Prevents header overlap */
-  padding-bottom: 80px; /* Prevents footer overlap */
+  padding-top: 120px; 
+  padding-bottom: 80px; 
   animation: changeBackground 20s infinite;
 }
 
@@ -1012,11 +1095,11 @@ height: 60px;
 
 /* Privacy Policy Content */
 .privacy-content {
-  width: 90%; /* Increased width */
-  max-width: 1000px; /* Wider content area */
-  background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+  width: 90%; 
+  max-width: 1000px; 
+  background: rgba(255, 255, 255, 0.1); 
   backdrop-filter: blur(30px);
-  padding: 40px; /* Increased padding */
+  padding: 40px; 
   border-radius: 12px;
   text-align: left;
   color: white;
@@ -1093,7 +1176,7 @@ height: 60px;
 /* Gallery Container */
 .gallery-container {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
 gap: 90px;
 padding: 20px;
 justify-content: center;
@@ -1165,7 +1248,7 @@ max-width: 800px;
 
 /* FAQ Item Styling */
 .faq-item {
-background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+background: rgba(255, 255, 255, 0.1);
 backdrop-filter: blur(10px);
 padding: 15px;
 border-radius: 10px;
@@ -1403,7 +1486,7 @@ display: block;
 
   /* Change grid layout to single column */
   .services {
-    grid-template-columns: 1fr; /* 1 column instead of 3 */
+    grid-template-columns: 1fr; 
   }
 
   .service-card {
@@ -1489,4 +1572,212 @@ display: block;
 
 .enquire-now:hover span {
   color: #f37b2a;
+}
+
+/* Vaibhav */
+
+/* Chatbot Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%; 
+  
+}
+
+/* Chat Messages */
+.chat-message {
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  max-width: 100%;
+}
+
+/* User & Bot Message Styles */
+.chat-message.user {
+  background: #ff802c;
+  color: white;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.chat-message.bot {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* Chat Input Box */
+.chat-input {
+  display: flex;
+  width: 100%;
+ 
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 10px;
+  background: #ff802c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.chat-input button:hover {
+  background: #e66b00;
+}
+
+/* Options for Quick Replies */
+.chat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.chat-options button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-options button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contact Support & Restart */
+.contact-options {
+  margin-top: 10px;
+}
+
+.contact-options button {
+  background: #ff802c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-options button:hover {
+  background: #e66b00;
+}
+
+.contact-options a {
+  color: #ff802c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-options a:hover {
+  text-decoration: underline;
+}
+.help-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Testimonials Page Background */
+.testimonials-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Ensures full viewport height */
+  display: flex;
+  flex-direction: column; /* Align content properly */
+  justify-content: center; /* Centers content */
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  color: #ff802c;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Background Image Animation (Same as Homepage) */
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: changeBackground 25s infinite;
+  transition: opacity 3s ease-in-out;
+  z-index: -1;
+}
+
+/* Average Rating */
+.average-rating {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Testimonials List */
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual Testimonial */
+.testimonial {
+  width: 300px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.customer-name {
+  font-weight: bold;
+  color: white;
+}
+
+.star-rating {
+  font-size: 1.2rem;
+  color: #ff802c;
+}
+
+.customer-feedback {
+  font-size: 1rem;
+  color: white;
+  margin-top: 5px;
 }

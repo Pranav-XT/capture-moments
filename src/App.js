@@ -13,6 +13,9 @@ import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import EnquiryPage from "./pages/Enquiry";
+import Terms from "./pages/Terms";
+import Help from "./pages/Help";
+import Testimonials from "./pages/Testimonials";
 import Loader from "./components/Loader";
 import Cursor from "./components/Cursor";
 import "./styles/styles.css";
@@ -42,7 +45,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/enquiry" element={<EnquiryPage />} />
-
+        <Route path="/Terms" element={<Terms />} />
+        <Route path="/Help" element={<Help />} />
+        <Route path="/Testimonials" element={<Testimonials />} />
       </Routes>
       <Footer />
     </CartProvider>

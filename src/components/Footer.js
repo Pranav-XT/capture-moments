@@ -8,12 +8,14 @@ import emailIcon from "../assets/email.png";
 import phoneIcon from "../assets/phone.png";
 import clockIcon from "../assets/clock.png";
 import helpIcon from "../assets/help.png";
+import Testimonials from "../pages/Testimonials";
 
 const Footer = () => {
   const { cartItems } = useCart();
 
   return (
     <footer className="footer">
+       
       <div className="footer-container">
         
         {/* 1st Column - Logo & Social Links */}
@@ -21,11 +23,10 @@ const Footer = () => {
           <Link to="/">
             <img src={logo} alt="Capture Moments Logo" className="logo" />
           </Link>
-          <br></br><br></br><h5><strong>Photography is more than just 
-            pictures; it’s about freezing emotions, capturing fleeting moments, 
-            and turning them into timeless memories.</strong></h5>
+          <br></br> <br></br><h5><strong>Photography is more than just 
+            pictures; it’s about freezing emotions,</strong></h5>
           <div className="social-icons">
-          <br></br> <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
+          <a href="https://web.whatsapp.com" target="_blank"><i className="fab fa-whatsapp"></i></a>
             <a href="https://instagram.com" target="_blank"><i className="fab fa-instagram"></i></a>
             <a href="https://facebook.com" target="_blank"><i className="fab fa-facebook"></i></a>
             <a href="https://youtube.com" target="_blank"><i className="fab fa-youtube"></i></a>
@@ -35,7 +36,8 @@ const Footer = () => {
           <div className="footer-bottom">
       
         <strong><Link to="/Terms">Terms & Conditions</Link></strong><br></br>
-        <br></br><strong><Link to="/privacy-policy">Privacy & Policy</Link></strong>
+        <br></br><strong><Link to="/privacy-policy">Privacy & Policy</Link></strong><br></br>
+        <br></br><strong><Link to="/Testimonials">Customer Feedback<br></br>⭐⭐⭐⭐⭐</Link></strong>
        
       </div> 
         </div>
@@ -70,12 +72,16 @@ const Footer = () => {
         <div className="footer-address">
           <h3>Contact Details</h3>
           <br></br><p><img src={locationIcon} alt="Location" /><a href="https://maps.app.goo.gl/SkQX6J7NhRB3T8Ve8" target="_blank">Sadguru Gadge Maharaj College, Karad 415110</a></p>
-          <br></br><p><img src={emailIcon} alt="Email" /><a href="mailto:pranavpatangext@gmail.com">pranavpatangext@gmail.com</a></p>
-          <br></br><p><img src={phoneIcon} alt="Phone" /><a href="tel:+917757984048">+91 7757984048</a></p>
-          <br></br><p><img src={clockIcon} alt="Clock" />8 AM - 5 PM, Monday-Saturday</p>
+          <br></br><p><img src={emailIcon} alt="Email" /><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pranavpatangext@gmail.com" target="_blank" rel="noopener noreferrer">Support@CaptureMoments.com</a></p>
+          <br></br><p><img src={phoneIcon} alt="Phone" /><a href="tel:+917757984048">Call Us (Sunday Holiday)</a></p>
+          <br></br><p>
+  <img src={clockIcon} alt="Clock" /> 
+  <Link to="/contact"> 8 AM - 5 PM, Monday-Saturday</Link>
+</p>
+
           <br></br> <p>
-  <Link to="/help" className="help-link">
-    <img src={helpIcon} alt="Help" /> 24/7 Help & Support
+  <Link to="/enquiry" className="Enquire">
+    <img src={helpIcon} alt="Enquire" /> 24/7 Help & Support
   </Link>
 </p>        </div>
       </div>
@@ -102,6 +108,7 @@ const Footer = () => {
           Designed and Developed With ❤️ by <strong><Link to="/contact">PranavXT</Link></strong>
         </p>
       </div>
+     
     </footer>
   );
 };
