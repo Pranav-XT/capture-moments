@@ -104,8 +104,10 @@ const Footer = () => {
       {/* Copyright & Credit Section */}
       <div className="footer-bottom">
         <p>
-          © Copyright 2025. All Rights Reserved by <strong><Link to="/">Capture Moments</Link></strong><br />
-          Designed and Developed With ❤️ by <strong><Link to="/contact">PranavXT</Link></strong>
+          © Copyright 2025. All Rights Reserved by <strong><Link to="/">Capture Moments</Link></strong><br/>
+          Designed and Developed With ❤️ by <strong><Link to="/contact">PranavXT</Link> </strong><br/>
+          </p><br/>
+          <p><h3><strong> Want this Site ? Find a way to Contact Me</strong> </h3>
         </p>
       </div>
      

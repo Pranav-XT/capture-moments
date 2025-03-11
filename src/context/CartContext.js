@@ -1,15 +1,23 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    // Load cart from localStorage
+    const savedCart = localStorage.getItem("cartItems");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    // Save cart to localStorage whenever it changes
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (item) => {
     setCartItems((prevCartItems) => {
       const existingItem = prevCartItems.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {
-
         return prevCartItems.map((cartItem) =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
@@ -20,21 +28,15 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-
-  const removeFromCart = (id, newQuantity = 0) => {
+  const removeFromCart = (id) => {
     setCartItems((prevCartItems) => {
-
-      if (newQuantity === 0) {
-        return prevCartItems.filter((item) => item.id !== id);
-      }
-
-      // Otherwise, update the quantity of the item
-      return prevCartItems.map((item) =>
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      );
+      return prevCartItems
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0);
     });
   };
-
 
   return (
     <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
@@ -43,5 +45,4 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom hook to access the cart context
 export const useCart = () => useContext(CartContext);
